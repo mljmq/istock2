@@ -17,6 +17,8 @@
         %th= t('attributes.username')
         %th= t('attributes.role')
         %th= "廠區"
+        %th= t('attributes.printer')
+
     %tbody
       - @users.each do |user|
         %tr
@@ -29,6 +31,8 @@
           %td= user.username
           %td= user.role
           %td= user.territory
+          %td
+            = user.printer.code if user.printer.present?
 
 %h5
   = link_to t('new_user'), new_user_path

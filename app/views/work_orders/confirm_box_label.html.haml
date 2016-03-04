@@ -70,6 +70,10 @@
         %td= text_field_tag :no_of_pallet2, nil, class: 'form-control input-sm small text-right', value: @record[:no_of_pallet2]
         %td= text_field_tag :total_box2, nil, class: 'form-control input-sm small text-right', value: @record[:pallet_qty2] * @record[:no_of_pallet2]
 
+  選擇打印機
+
+  = select_tag 'printer_id', options_from_collection_for_select(Printer.all.select(:uuid,:code), 'uuid', 'code', current_user.printer_id), class: 'select optional form-control'
+
   = button_tag class: 'btn btn-primary btn-form-submit btn-lg', type: 'button' do
     打印外箱條碼標籤
     %span.glyphicon.glyphicon-print

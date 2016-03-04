@@ -95,7 +95,9 @@ class StockMaster < ActiveRecord::Base
     record = (Sapdb.find_by_sql [SQL_MKPF, params[:id]]).first
     stock_master = StockMaster.where(:mjahr => record.mjahr).where(:mblnr => record.mblnr).first || create_label(params, record)
 
-    socket = TCPSocket.new('172.91.8.56','9100')
+    printer = Printer.find params[:printer_id]
+    socket = TCPSocket.new(printer.ip, printer.port)
+
     stock_master.barcodes.each do |barcode|
       hash = {
           :id => barcode.id,

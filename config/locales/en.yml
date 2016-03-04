@@ -42,6 +42,7 @@ en:
   print_barcode: '條碼'
   print_receipt: '入庫單'
   work_order_receipt: '工單成品入庫'
+  new_printer: '創建打印機'
 
   attributes:
     user: '用戶'
@@ -85,7 +86,11 @@ en:
     stock_out: '出库'
     master_id: '条码'
 
-
+    territory: '區域'
+    printer: '打印機'
+    code: '代碼'
+    ip: 'IP'
+    port: '端口'
   views:
       pagination:
         first: "&laquo; 首頁"

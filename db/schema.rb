@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160304040820) do
+ActiveRecord::Schema.define(version: 20160304053907) do
 
   create_table "barcode", id: false, force: :cascade do |t|
     t.string   "uuid",                           null: false
@@ -125,6 +125,7 @@ ActiveRecord::Schema.define(version: 20160304040820) do
     t.string   "role"
     t.integer  "supplier_id",            precision: 38
     t.string   "territory"
+    t.string   "printer_id"
   end
 
   add_index "user", ["email"], name: "index_user_on_email", unique: true
