@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :printers
   resources :barcodes
   resources :stock_masters
   resources :stock_trans do
