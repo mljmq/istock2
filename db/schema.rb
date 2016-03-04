@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150911020758) do
 
   create_table "barcode", id: false, force: :cascade do |t|
-    t.string   "id",                                      null: false
+    t.string   "uuid",                           null: false
     t.string   "name"
     t.string   "stock_master_id"
     t.string   "parent_id"
@@ -22,16 +22,16 @@ ActiveRecord::Schema.define(version: 20150911020758) do
     t.string   "old_id"
     t.string   "lgort"
     t.string   "status"
-    t.integer  "menge",           limit: 3, precision: 3
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.integer  "menge",           precision: 38
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
   end
 
-  add_index "barcode", ["id"], name: "index_barcode_on_id", unique: true
   add_index "barcode", ["name"], name: "index_barcode_on_name"
+  add_index "barcode", ["uuid"], name: "index_barcode_on_uuid", unique: true
 
   create_table "stock_master", id: false, force: :cascade do |t|
-    t.string   "id",                        null: false
+    t.string   "uuid",                      null: false
     t.string   "matnr"
     t.string   "maktx"
     t.string   "matkl"
@@ -55,12 +55,12 @@ ActiveRecord::Schema.define(version: 20150911020758) do
   end
 
   add_index "stock_master", ["aufnr"], name: "index_stock_master_on_aufnr"
-  add_index "stock_master", ["id"], name: "index_stock_master_on_id", unique: true
   add_index "stock_master", ["matnr"], name: "index_stock_master_on_matnr"
   add_index "stock_master", ["mjahr", "mblnr", "zeile"], name: "i_sto_mas_mja_mbl_zei"
+  add_index "stock_master", ["uuid"], name: "index_stock_master_on_uuid", unique: true
 
   create_table "stock_tran", id: false, force: :cascade do |t|
-    t.string   "id",                         null: false
+    t.string   "uuid",                       null: false
     t.string   "master_id"
     t.string   "barcode_id"
     t.string   "lgort_old"
@@ -89,11 +89,11 @@ ActiveRecord::Schema.define(version: 20150911020758) do
   end
 
   add_index "stock_tran", ["barcode_id"], name: "index_stock_tran_on_barcode_id"
-  add_index "stock_tran", ["id"], name: "index_stock_tran_on_id", unique: true
   add_index "stock_tran", ["master_id"], name: "index_stock_tran_on_master_id"
+  add_index "stock_tran", ["uuid"], name: "index_stock_tran_on_uuid", unique: true
 
   create_table "user", id: false, force: :cascade do |t|
-    t.string   "id",                                                 null: false
+    t.string   "uuid",                                               null: false
     t.string   "email",                                 default: "", null: false
     t.string   "encrypted_password",                    default: "", null: false
     t.string   "reset_password_token"
@@ -113,8 +113,8 @@ ActiveRecord::Schema.define(version: 20150911020758) do
   end
 
   add_index "user", ["email"], name: "index_user_on_email", unique: true
-  add_index "user", ["id"], name: "index_user_on_id", unique: true
   add_index "user", ["reset_password_token"], name: "i_user_reset_password_token", unique: true
   add_index "user", ["username"], name: "index_user_on_username", unique: true
+  add_index "user", ["uuid"], name: "index_user_on_uuid", unique: true
 
 end

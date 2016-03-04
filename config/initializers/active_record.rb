@@ -1,12 +1,12 @@
 class ActiveRecord::Base
-  #self.primary_key = :uuid
-  before_create :assign_id
+  self.primary_key = :uuid
+  before_create :assign_uuid
 
   private
 
-  def assign_id
-    if attributes.include?('id')
-      self.id = UUID.new.generate(:compact) if id.nil?
+  def assign_uuid
+    if attributes.include?('uuid')
+      self.uuid = UUID.new.generate(:compact) if uuid.nil?
     end
   end
 

@@ -1,7 +1,7 @@
 class CreateStockTran < ActiveRecord::Migration
   def change
     create_table :stock_tran, id: false do |t|
-      t.string :id, null: false
+      t.string :uuid, null: false
       t.string :master_id
       t.string :barcode_id
       t.string :lgort_old
@@ -28,7 +28,7 @@ class CreateStockTran < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_index :stock_tran, :id, :unique => true
+    add_index :stock_tran, :uuid, :unique => true
     add_index :stock_tran, :master_id
     add_index :stock_tran, :barcode_id
 

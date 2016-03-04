@@ -1,7 +1,7 @@
 class CreateBarcode < ActiveRecord::Migration
   def change
     create_table :barcode, id: false do |t|
-      t.string :id, null: false
+      t.string :uuid, null: false
       t.string :name
       t.string :stock_master_id
       t.string :parent_id
@@ -13,7 +13,7 @@ class CreateBarcode < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_index :barcode, :id, unique: true
+    add_index :barcode, :uuid, unique: true
     add_index :barcode, :name
   end
 end

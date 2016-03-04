@@ -1,4 +1,5 @@
 class Barcode < ActiveRecord::Base
+  self.primary_key = :uuid
   belongs_to :stock_master
 
   def self.test

@@ -1,4 +1,5 @@
 class StockMaster < ActiveRecord::Base
+  self.primary_key = :uuid
   has_many :barcodes, :class_name => 'Barcode', :dependent => :destroy
   def self.get_packaging(matnr)
     sql = "
