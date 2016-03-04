@@ -1,0 +1,12 @@
+
+-if user_signed_in?
+  %li=# link_to 'Edit account', edit_user_registration_path
+  %li= link_to '工單收貨', receipt_work_orders_path
+  %li= link_to '物料主檔', stock_masters_path
+  %li= link_to '入库', in_stock_trans_path
+  %li= link_to '出库', out_stock_trans_path
+  %li= link_to 'Sign out', destroy_user_session_path, :method=>'delete'
+  %li= link_to 'Users', users_path if current_user.role == 'admin'
+-else
+  %li= link_to 'Sign in', new_user_session_path
+

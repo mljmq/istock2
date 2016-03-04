@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  master_id: 1
+  barcode_id: 1
+  lgort_old: MyString
+  lgort: MyString
+  status: MyString
+  qty: 1.5
+  vbeln: MyString
+  posnr: MyString
+  meins: MyString
+  mjahr: MyString
+  mblnr: MyString
+  zeile: MyString
+  aufnr: MyString
+  prdln: MyString
+  ebeln: MyString
+  ebelp: MyString
+  mtype: MyString
+  created_by: MyString
+  created_ip: MyString
+  created_mac: MyString
+  updated_by: MyString
+  updated_ip: MyString
+  updated_mac: MyString
+
+two:
+  master_id: 1
+  barcode_id: 1
+  lgort_old: MyString
+  lgort: MyString
+  status: MyString
+  qty: 1.5
+  vbeln: MyString
+  posnr: MyString
+  meins: MyString
+  mjahr: MyString
+  mblnr: MyString
+  zeile: MyString
+  aufnr: MyString
+  prdln: MyString
+  ebeln: MyString
+  ebelp: MyString
+  mtype: MyString
+  created_by: MyString
+  created_ip: MyString
+  created_mac: MyString
+  updated_by: MyString
+  updated_ip: MyString
+  updated_mac: MyString

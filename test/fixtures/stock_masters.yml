@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  matnr: MyString
+  maktx: MyString
+  matkl: MyString
+  charg: MyString
+  menge: 1.5
+  box_cnt: 1
+  pallet_cnt: 1
+  werks: MyString
+  meins: MyString
+  mjahr: MyString
+  mblnr: MyString
+  zeile: MyString
+  aufnr: MyString
+  prdln: MyString
+  ebeln: MyString
+  ebelp: MyString
+
+two:
+  matnr: MyString
+  maktx: MyString
+  matkl: MyString
+  charg: MyString
+  menge: 1.5
+  box_cnt: 1
+  pallet_cnt: 1
+  werks: MyString
+  meins: MyString
+  mjahr: MyString
+  mblnr: MyString
+  zeile: MyString
+  aufnr: MyString
+  prdln: MyString
+  ebeln: MyString
+  ebelp: MyString
