@@ -65,6 +65,9 @@ class BarcodesController < ApplicationController
 
   end
 
+  def in_post
+
+  end
 
 
   private
