@@ -45,6 +45,7 @@ en:
   new_printer: '創建打印機'
 
   attributes:
+    barcode: '條碼'
     user: '用戶'
     created_at: '建立時間'
     creator: '建立者'
@@ -91,6 +92,7 @@ en:
     code: '代碼'
     ip: 'IP'
     port: '端口'
+    storage: '儲存架位置'
   views:
       pagination:
         first: "&laquo; 首頁"

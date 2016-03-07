@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   resources :printers
-  resources :barcodes
+  resources :barcodes do
+    get :in, on: :collection
+  end
   resources :stock_masters
   resources :stock_trans do
     get :in, :on => :collection

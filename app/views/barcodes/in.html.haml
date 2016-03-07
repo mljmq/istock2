@@ -1,0 +1,53 @@
+.panel.panel-default
+  .panel-heading
+    %h4
+      倉庫掃描收貨及上架
+
+    = form_tag(in_barcodes_url, method: 'get', class: 'form-horizontal', remote: true, id:'form_id') do
+      .form-group
+        %label.col-sm-2.control-label{for: 'storage'}
+          = t('attributes.storage')
+        .col-sm-10
+          = text_field_tag :storage, nil, placeholder: t('attributes.storage'), class: 'form-control', value: params[:storage], id: 'storage'
+      .form-group
+        %label.col-sm-2.control-label{for: 'storage'}
+          = t('attributes.barcode')
+        .col-sm-10
+          = text_field_tag :barcode, nil,placeholder: t('attributes.barcode'), class: 'form-control', value: '', id: 'barcode'
+  .panel-body
+    #reply{'min-height':'100px'}
+      #message
+
+:javascript
+  $(document).ready(function () {
+    if ($('#storage').val() == ""){
+      $('#storage').focus();
+    }
+    else{
+      $('#barcode').focus();
+    }
+
+    $('#barcode').focus(function(){
+      if ($('#storage').val() == ""){
+        alert('儲存架位置, 不能為空!')
+        $('#storage').focus();
+      }
+    });
+
+
+    $('#aufnr').change(function(){
+      $.ajax({
+        url: '/qrcodes/get_product_order',
+        data: {aufnr: $('#aufnr').val()}
+      })
+    });
+
+    $('#qrcode').change(function(){
+      if ($('#qrcode').val() != ""){
+          $('#form_id').submit();
+      }
+      $('#qrcode').val("");
+    });
+
+  })
+
