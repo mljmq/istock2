@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160304080127) do
+ActiveRecord::Schema.define(version: 20160307012420) do
 
   create_table "barcode", id: false, force: :cascade do |t|
     t.string   "uuid",                           null: false
@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 20160304080127) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.string   "storage"
+    t.integer  "seq",             precision: 38
   end
 
   add_index "barcode", ["name"], name: "index_barcode_on_name"
+  add_index "barcode", ["seq"], name: "index_barcode_on_seq"
   add_index "barcode", ["storage"], name: "index_barcode_on_storage"
   add_index "barcode", ["uuid"], name: "index_barcode_on_uuid", unique: true
 
