@@ -1,0 +1,21 @@
+.panel.panel-default
+  .panel-heading
+    條碼信息查詢
+  .panel-body{style:'padding-bottom: 0px;'}
+    = form_tag(scan_barcodes_url, method: 'get', class: 'form-horizontal', id:'form_id') do
+      .form-group
+        .col-xs-12
+          = text_field_tag :barcode, nil,placeholder: t('attributes.barcode'), class: 'form-control', value:'', id: 'barcode'
+    %hr
+    - if @barcode.present?
+      %dl.dl-horizontal
+        %dt= t('attributes.barcode')
+        %dd= @barcode.seq
+        %dt= t('attributes.matnr')
+        %dd= @barcode.stock_master.matnr
+        %dt= t('attributes.aufnr')
+        %dd= @barcode.stock_master.aufnr
+        %dt= 'DCODE'
+        %dd= @barcode.stock_master.datecode
+        %dt= t('attributes.charg')
+        %dd= @barcode.stock_master.charg

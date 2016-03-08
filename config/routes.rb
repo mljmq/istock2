@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :printers
 
   resources :barcodes do
+    get :scan, on: :collection
     get :in, on: :collection
     get :in_scan, on: :collection
     post :in_putaway, on: :collection

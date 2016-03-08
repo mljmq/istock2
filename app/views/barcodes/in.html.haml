@@ -66,8 +66,7 @@
             { title: "產品" },
             { title: "數量" },
             { title: "批次" },
-            { title: "包裝" },
-            { title: "删除"}
+            { title: "包裝" }
         ],
         columnDefs: [
           {
@@ -120,7 +119,6 @@
                 json[index].menge,
                 json[index].charg,
                 json[index].name[0].toUpperCase(),
-                '<button type="button" class="close"><span aria-hidden="true">&times;</span></button>'
               ]).draw(false);
               $('#qty').val(parseFloat($('#qty').val()) + json[index].menge)
               if (json[index].name[0].toUpperCase() == 'P'){
@@ -160,8 +158,16 @@
           storage: $('#storage').val()
         }
       });
-      ajax.done(function(){
-        init_page();
+      ajax.done(function(response){
+        if (response.barcode_uuid == 'success'){
+          alert("倉庫掃描收貨及上架成功");
+          init_page();
+        }
+        else{
+          alert("注意系統錯誤, 請再一次上傳\n\nbarcode_uuid:"+response.barcode_uuid + "\n" +response.error_message);
+          $('#putaway').attr("disabled", false);
+          $('#putaway').attr("value", '確認上貨架');
+        }
       });
     });
 
