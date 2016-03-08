@@ -47,7 +47,7 @@ class Barcode < ActiveRecord::Base
       ^FT725,768^A0B,33,33^FH\^FDQuantity^FS
       ^FT252,763^A0B,75,74^FH\^FD#{hash[:mo]}^FS
       ^FT588,768^A0B,33,33^FH\^FDLEI Product No^FS
-      ^FT901,768^A0B,50,50^FH\^FD#{hash[:name]}^FS
+      ^FT901,768^A0B,50,50^FH\^FD#{hash[:name]} ^FS
       ^FT901,414^A0B,50,50^FH\^FD**#{hash[:seq]}**^FS
       ^FT803,768^A0B,75,74^FH\^FD#{hash[:qty]} #{hash[:meins]}^FS
       ^FT674,768^A0B,75,74^FH\^FD#{hash[:product_no]}^FS
