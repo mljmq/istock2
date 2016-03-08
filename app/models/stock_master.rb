@@ -109,7 +109,9 @@ class StockMaster < ActiveRecord::Base
           :product_no => stock_master.matnr,
           :seq => barcode.seq,
           :name => barcode.name.blank? ? '' : barcode.name[0].upcase,
-          :meins => stock_master.meins
+          :meins => stock_master.meins,
+          :seq_parent => (barcode.parent_id != 0 && barcode.name[0].upcase.eql?('B')) ? barcode.parent.seq : '',
+          :name_parent => (barcode.parent_id != 0 && barcode.name[0].upcase.eql?('P')) ? 'P' : barcode.parent.name[0].upcase
       }
       zpl_command = Barcode.finish_goods_label hash
       socket.write zpl_command

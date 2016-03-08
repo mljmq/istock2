@@ -80,6 +80,10 @@ class BarcodesController < ApplicationController
     render text: 'completed'
   end
 
+  def repeat_printer_label
+
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_barcode
@@ -88,6 +92,6 @@ class BarcodesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def barcode_params
-      params.require(:barcode).permit(:storage,:name, :stock_master_id, :parent_id, :child, :lgort, :status, :menge,:seq)
+      params.require(:barcode).permit(:storage,:name, :stock_master_id, :parent_id, :child, :lgort, :status, :menge)
     end
 end

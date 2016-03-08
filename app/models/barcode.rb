@@ -1,6 +1,7 @@
 class Barcode < ActiveRecord::Base
   self.primary_key = :uuid
   belongs_to :stock_master
+  belongs_to :parent, class_name: 'Barcode', foreign_key: 'parent_id', primary_key: 'uuid'
 
   def self.test
     str =
@@ -16,7 +17,7 @@ class Barcode < ActiveRecord::Base
         ^FT22,339^A0N,42,196^FH\^FDfff^FS
         ^FT25,267^A0N,42,196^FH\^FDfff^FS
         ^FT28,185^A0N,42,196^FH\^FDfff^FS
-        ^FT28,91^A0N,42,196^FH\^FDfff^FS
+        ^FT28,91^A0N,42,196^FH\^FDfff^FSb
         ^BY4,3,236^FT594,264^BCN,,Y,N
         ^FD>;123456^FS
         ^FT344,128^A0N,42,40^FH\^FDdfdsf^FS
@@ -28,7 +29,7 @@ class Barcode < ActiveRecord::Base
   end
 
   def self.finish_goods_label(hash)
-    "
+    lab1 = "
       ^XA~TA000~JSN^LT0^MNW^MTT^PON^PMN^LH0,0^JMA^PR4,4~SD20^JUS^LRN^CI0^XZ
       ^XA
       ^MMT
@@ -47,13 +48,32 @@ class Barcode < ActiveRecord::Base
       ^FT725,768^A0B,33,33^FH\^FDQuantity^FS
       ^FT252,763^A0B,75,74^FH\^FD#{hash[:mo]}^FS
       ^FT588,768^A0B,33,33^FH\^FDLEI Product No^FS
+    "
+    lab2 = "
+      ^FT914,768^A0B,28,50^FH\^FD#{hash[:name]}^FS
+      ^FT930,532^A0B,55,67^FH\^FD**#{hash[:seq]}**^FS
+      ^FT867,768^A0B,28,50^FH\^FD#{hash[:name_parent]}^FS
+      ^FT865,425^A0B,38,50^FH\^FD**#{hash[:seq_parent]}**^FS
+    "
+    if hash[:seq_parent].blank?
+      lab2 = "
       ^FT901,768^A0B,50,50^FH\^FD#{hash[:name]}^FS
       ^FT901,414^A0B,50,50^FH\^FD**#{hash[:seq]}**^FS
+     "
+
+    end
+    lab3 = "
       ^FT803,768^A0B,75,74^FH\^FD#{hash[:qty]} #{hash[:meins]}^FS
       ^FT674,768^A0B,75,74^FH\^FD#{hash[:product_no]}^FS
       ^FT135,763^A0B,75,74^FH\^FDLeader Electronics Inc^FS
       ^PQ1,0,1,Y^XZ
     "
+    lab = lab1 + lab2 + lab3
+    finish_goods_label_end lab
+  end
+
+  def self.finish_goods_label_end(str)
+     str
   end
 
   def self.finish_goods_label_old(hash)
