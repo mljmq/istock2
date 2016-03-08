@@ -45,15 +45,20 @@
           %dd= @barcode.parent.seq
     %hr
     - if @barcodes.present?
+      = "此棧板上有#{@barcodes.size}箱"
       .table-responsive
         %table.table.table-striped.table-condensed.small
           %thead
             %tr
+              %th
               %th= t('attributes.barcode')
               %th= t('attributes.menge')
           %tbody
+            - i = 0
             - @barcodes.each do |row|
+              - i += 1
               %tr
+                %td= i
                 %td= row.seq
                 %td
                   = row.menge
