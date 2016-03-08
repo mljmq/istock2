@@ -111,6 +111,20 @@ ActiveRecord::Schema.define(version: 20160307012420) do
   add_index "stock_tran", ["master_id"], name: "index_stock_tran_on_master_id"
   add_index "stock_tran", ["uuid"], name: "index_stock_tran_on_uuid", unique: true
 
+  create_table "storage", id: false, force: :cascade do |t|
+    t.string   "uuid",       null: false
+    t.string   "code"
+    t.string   "name"
+    t.string   "werks"
+    t.string   "creator_id"
+    t.string   "updater_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "storage", ["code"], name: "index_storage_on_code"
+  add_index "storage", ["uuid"], name: "index_storage_on_uuid", unique: true
+
   create_table "user", id: false, force: :cascade do |t|
     t.string   "uuid",                                               null: false
     t.string   "email",                                 default: "", null: false
