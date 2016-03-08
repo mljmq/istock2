@@ -42,6 +42,8 @@ class Barcode < ActiveRecord::Base
       ^FT804,349^A0B,75,74^FH\^FD#{hash[:date]}^FS
       ^FT306,763^A0B,33,33^FH\^FDDate Code^FS
       ^FT394,763^A0B,75,74^FH\^FD#{hash[:date_code]}^FS
+      ^FT435,225^A0B,33,33^FH\^FDPlant^FS
+      ^FT525,225^A0B,75,74^FH\^FD#{hash[:factory]}^FS
       ^FT449,763^A0B,33,33^FH\^FDLot No^FS
       ^FT532,763^A0B,75,74^FH\^FD#{hash[:lot_no]}^FS
       ^FT187,763^A0B,33,33^FH\^FDMO^FS
