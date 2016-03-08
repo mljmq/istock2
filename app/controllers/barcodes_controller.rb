@@ -77,7 +77,7 @@ class BarcodesController < ApplicationController
   end
 
   def in_putaway
-
+    render text: 'completed'
   end
 
   private
