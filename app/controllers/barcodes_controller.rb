@@ -88,6 +88,6 @@ class BarcodesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def barcode_params
-      params.require(:barcode).permit(:storage,:name, :stock_master_id, :parent_id, :child, :lgort, :status, :menge)
+      params.require(:barcode).permit(:storage,:name, :stock_master_id, :parent_id, :child, :lgort, :status, :menge,:seq)
     end
 end

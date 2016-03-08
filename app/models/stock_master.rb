@@ -106,7 +106,10 @@ class StockMaster < ActiveRecord::Base
           :lot_no => stock_master.charg,
           :mo => stock_master.aufnr,
           :qty => barcode.menge,
-          :product_no => stock_master.matnr
+          :product_no => stock_master.matnr,
+          :seq => barcode.seq,
+          :name => barcode.name.blank? ? '' : barcode.name[0].upcase,
+          :meins => stock_master.meins
       }
       zpl_command = Barcode.finish_goods_label hash
       socket.write zpl_command

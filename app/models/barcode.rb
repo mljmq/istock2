@@ -35,23 +35,23 @@ class Barcode < ActiveRecord::Base
       ^PW945
       ^LL0768
       ^LS0
-      ^FT154,276^BQN,2,7
+      ^FT189,340^BQN,2,7
       ^FDLA,#{hash[:id]}^FS
-      ^FT695,345^A0B,33,33^FH\^FDDate^FS
-      ^FT773,344^A0B,75,74^FH\^FD#{hash[:date]}^FS
-      ^FT270,763^A0B,33,33^FH\^FDDate Code^FS
-      ^FT359,763^A0B,75,74^FH\^FD#{hash[:date_code]}^FS
-      ^FT414,763^A0B,33,33^FH\^FDLot No^FS
-      ^FT496,763^A0B,75,74^FH\^FD#{hash[:lot_no]}^FS
-      ^FT151,763^A0B,33,33^FH\^FDMO^FS
-      ^FT694,763^A0B,33,33^FH\^FDQuantity^FS
-      ^FT217,763^A0B,75,74^FH\^FD#{hash[:mo]}^FS
-      ^FT557,763^A0B,33,33^FH\^FDLEI Product No^FS
-      ^FT772,763^A0B,75,74^FH\^FD#{hash[:qty]}^FS
-      ^FT644,763^A0B,75,74^FH\^FD#{hash[:product_no]}^FS
-      ^FT100,763^A0B,75,74^FH\^FDLeader Electronics Inc^FS
-      ^BY1,3,94^FT909,674^B3B,N,,Y,N
-      ^FD#{hash[:id]}^FS
+      ^FT726,350^A0B,33,33^FH\^FDDate^FS
+      ^FT804,349^A0B,75,74^FH\^FD#{hash[:date]}^FS
+      ^FT306,763^A0B,33,33^FH\^FDDate Code^FS
+      ^FT394,763^A0B,75,74^FH\^FD#{hash[:date_code]}^FS
+      ^FT449,763^A0B,33,33^FH\^FDLot No^FS
+      ^FT532,763^A0B,75,74^FH\^FD#{hash[:lot_no]}^FS
+      ^FT187,763^A0B,33,33^FH\^FDMO^FS
+      ^FT725,768^A0B,33,33^FH\^FDQuantity^FS
+      ^FT252,763^A0B,75,74^FH\^FD#{hash[:mo]}^FS
+      ^FT588,768^A0B,33,33^FH\^FDLEI Product No^FS
+      ^FT901,768^A0B,50,50^FH\^FD#{hash[:name]}^FS
+      ^FT901,414^A0B,50,50^FH\^FD**#{hash[:seq]}**^FS
+      ^FT803,768^A0B,75,74^FH\^FD#{hash[:qty]} #{hash[:meins]}^FS
+      ^FT674,768^A0B,75,74^FH\^FD#{hash[:product_no]}^FS
+      ^FT135,763^A0B,75,74^FH\^FDLeader Electronics Inc^FS
       ^PQ1,0,1,Y^XZ
     "
   end
