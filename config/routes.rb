@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
 
   resources :printers
+
   resources :barcodes do
     get :in, on: :collection
+    get :in_scan, on: :collection
+    post :in_putaway, on: :collection
   end
+
   resources :stock_masters
   resources :stock_trans do
     get :in, :on => :collection
-    get :in_process, :on => :collection
+    get :in_scan, :on => :collection
     get :out, :on => :collection
   end
 

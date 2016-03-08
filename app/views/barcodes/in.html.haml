@@ -1,25 +1,42 @@
+%link{href: '/js/DataTables/datatables.min.css', rel:'stylesheet'}
+%script{src: '/js/DataTables/datatables.min.js'}
+
 .panel.panel-default
   .panel-heading
-    %h4
-      倉庫掃描收貨及上架
-
-    = form_tag(in_barcodes_url, method: 'get', class: 'form-horizontal', remote: true, id:'form_id') do
+    倉庫掃描收貨及上架
+    .pull-right
+      %a#InitPageLink{href:'#'}
+        清除資料
+  .panel-body{style:'padding-bottom: 0px;'}
+    = form_tag(in_scan_barcodes_url, method: 'get', class: 'form-horizontal', remote: true, id:'form_id') do
       .form-group
-        %label.col-sm-2.control-label{for: 'storage'}
-          = t('attributes.storage')
-        .col-sm-10
+        .col-xs-12
           = text_field_tag :storage, nil, placeholder: t('attributes.storage'), class: 'form-control', value: params[:storage], id: 'storage'
       .form-group
-        %label.col-sm-2.control-label{for: 'storage'}
-          = t('attributes.barcode')
-        .col-sm-10
+        .col-xs-12
           = text_field_tag :barcode, nil,placeholder: t('attributes.barcode'), class: 'form-control', value: '', id: 'barcode'
-  .panel-body
-    #reply{'min-height':'100px'}
-      #message
+
+    總數量:<input type='text' id='qty' disabled='disabled' value='0' size='5px'/>
+    總箱量:<input type='text' id='box' disabled='disabled' value='0' size='5px'/>
+    總棧板:<input type='text' id='pallet' disabled='disabled' value='0' size='5px'/>
+    <input id='putaway' class="btn btn-primary btn-sm" type="button">
+  .table-responsive
+    %table.table.table-striped.small.table-condensed#grid_view{width:'100%'}
 
 :javascript
+  var dataSet = [];
+
+  function init_page(){
+    $('#qty').val('0');
+    $('#box').val('0');
+    $('#pallet').val('0');
+    $('#putaway').attr("disabled", false);
+    $('#putaway').attr("value", '確認上貨架');
+    $('#grid_view').DataTable().clear().draw();
+  }
+
   $(document).ready(function () {
+
     if ($('#storage').val() == ""){
       $('#storage').focus();
     }
@@ -34,20 +51,121 @@
       }
     });
 
-
-    $('#aufnr').change(function(){
-      $.ajax({
-        url: '/qrcodes/get_product_order',
-        data: {aufnr: $('#aufnr').val()}
-      })
+     $('#grid_view').DataTable( {
+        data: dataSet,
+        info: false,
+        ordering: true,
+        paging: false,
+        searching: false,
+        scrollY: '50vh',
+        scrollX: true,
+        scrollCollapse: true,
+        columns: [
+            { title: "UUID" },
+            { title: "標籤" },
+            { title: "產品" },
+            { title: "數量" },
+            { title: "批次" },
+            { title: "包裝" },
+            { title: "删除"}
+        ],
+        columnDefs: [
+          {
+            targets: [0],
+            visible: false,
+            searchable: false
+          }
+        ]
     });
 
-    $('#qrcode').change(function(){
-      if ($('#qrcode').val() != ""){
-          $('#form_id').submit();
+    $('#grid_view tbody').on( 'click', 'button.close', function () {
+      if(confirm("确定要清空数据吗？")){
+        table_row = $('#grid_view').DataTable().row($(this).parents('tr'));
+        $('#qty').val(parseFloat($('#qty').val()) - table_row.data()[3])
+        if (table_row.data()[5] == 'P'){
+          $('#pallet').val(parseInt($('#pallet').val()) - 1)
+        }
+        else{
+          $('#box').val(parseInt($('#box').val()) - 1)
+        }
+        $('#grid_view').DataTable()
+          .row($(this).parents('tr'))
+          .remove()
+          .draw();
+      };
+    });
+
+    $('#barcode').change(function(){
+      if ($('#barcode').val() != ""){
+        $.ajax({
+          url: 'in_scan',
+          data: {
+            barcode: $('#barcode').val()
+          }
+        }).done(function(json){
+          data = $('#grid_view').DataTable().data()
+          for (index = 0; index < json.length; index++) {
+            found = false;
+            for(i = 0; i < data.length; i++){
+              if (data[i][0] == json[index].uuid){
+                found = true;
+                break;
+              }
+            }
+            if (found == false) {
+              $('#grid_view').DataTable().row.add([
+                json[index].uuid,
+                json[index].seq,
+                json[index].matnr,
+                json[index].menge,
+                json[index].charg,
+                json[index].name[0].toUpperCase(),
+                '<button type="button" class="close"><span aria-hidden="true">&times;</span></button>'
+              ]).draw(false);
+              $('#qty').val(parseFloat($('#qty').val()) + json[index].menge)
+              if (json[index].name[0].toUpperCase() == 'P'){
+                $('#pallet').val(parseInt($('#pallet').val()) + 1)
+              }
+              else{
+                $('#box').val(parseInt($('#box').val()) + 1)
+              }
+            }
+          }
+        });
       }
-      $('#qrcode').val("");
+      $('#barcode').val("");
     });
+
+    $('#InitPageLink').click(function(){
+      init_page();
+    });
+
+    $('#putaway').click(function(){
+      $(this).attr("disabled", true);
+      $(this).attr("value", '保存中...');
+      _uuid = '';
+      dataStore = $('#grid_view').DataTable().data();
+      for(i = 0; i < dataStore.length; i++){
+        if (_uuid != ''){
+          _uuid = _uuid + ',';
+        }
+        _uuid = _uuid + dataStore[i][0]
+      }
+
+      ajax = $.ajax({
+        url: 'in_putaway',
+        method: 'post',
+        data: {
+          uuid: _uuid,
+          storage: $('#storage').val()
+        }
+      });
+      ajax.done(function(){
+        init_page();
+      });
+    });
+
+    init_page();
 
   })
 
