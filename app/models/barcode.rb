@@ -85,4 +85,17 @@ class Barcode < ActiveRecord::Base
     "
   end
 
+  def self.in_scan(uuid, storage)
+    sql = "
+      select a.uuid,a.seq,a.name,a.menge,b.matnr,b.charg
+        from barcode a join stock_master b on b.uuid = a.stock_master_id
+        where a.uuid = ?
+    "
+    rows = Barcode.find_by_sql [sql, params[:barcode]]
+
+    if rows.present?
+      row = rows.first
+    end
+  end
+
 end

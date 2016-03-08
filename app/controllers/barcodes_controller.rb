@@ -65,10 +65,20 @@ class BarcodesController < ApplicationController
 
   end
 
-  def in_post
+  def in_scan
+    sql = "
+      select a.uuid,a.seq,a.name,a.menge,b.matnr,b.charg
+        from barcode a join stock_master b on b.uuid = a.stock_master_id
+        where (a.uuid = ? or a.parent_id = ?)
+    "
+    rows = Barcode.find_by_sql [sql, params[:barcode], params[:barcode]]
 
+    render json: rows
   end
 
+  def in_putaway
+
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
