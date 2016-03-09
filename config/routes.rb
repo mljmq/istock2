@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :stock_masters
   resources :stock_trans do
     get :in, :on => :collection
-    get :in_scan, :on => :collection 
+    get :in_scan, :on => :collection
     get :out, :on => :collection
   end
 
