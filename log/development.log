@@ -1,0 +1,1368 @@
+
+
+Started GET "/" for 172.91.132.3 at 2016-03-07 09:29:17 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT "SCHEMA_MIGRATIONS".* FROM "SCHEMA_MIGRATIONS"[0m
+  [1m[35m (3.8ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'SCHEMA_MIGRATIONS' AND hidden_column = 'NO' ORDER BY column_id
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:59:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.0.2) lib/puma/configuration.rb:221:in `call'
+  puma (3.0.2) lib/puma/server.rb:561:in `handle_request'
+  puma (3.0.2) lib/puma/server.rb:406:in `process_client'
+  puma (3.0.2) lib/puma/server.rb:271:in `block in run'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `call'
+  puma (3.0.2) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1mSELECT "SCHEMA_MIGRATIONS".* FROM "SCHEMA_MIGRATIONS"[0m
+  [1m[35m (3.8ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'SCHEMA_MIGRATIONS' AND hidden_column = 'NO' ORDER BY column_id
+Migrating to AddSeqToBarcode (20160307012420)
+  [1m[36m (69.0ms)[0m  [1mALTER TABLE "BARCODE" ADD "SEQ" NUMBER(38)[0m
+  [1m[35m (28.2ms)[0m              SELECT 1 FROM all_indexes i
+            WHERE i.owner = 'ISTOCK'
+               AND i.table_owner = 'ISTOCK'
+               AND i.table_name = 'BARCODE'
+               AND i.index_name = 'INDEX_BARCODE_ON_SEQ'
+
+  [1m[36m (22.3ms)[0m  [1mCREATE  INDEX "INDEX_BARCODE_ON_SEQ" ON "BARCODE" ("SEQ") [0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "SCHEMA_MIGRATIONS" ("VERSION") VALUES (:a1)  [["version", "20160307012420"]]
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "SCHEMA_MIGRATIONS".* FROM "SCHEMA_MIGRATIONS"[0m
+  [1m[35m (78.2ms)[0m  SELECT DECODE(table_name, UPPER(table_name), LOWER(table_name), table_name) FROM all_tables WHERE owner = SYS_CONTEXT('userenv', 'current_schema') AND secondary = 'N'
+  [1m[36m (21.5ms)[0m  [1mSELECT LOWER(mview_name) FROM all_mviews WHERE owner = SYS_CONTEXT('userenv', 'current_schema')[0m
+  [1m[35m (8.2ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'BARCODE' AND hidden_column = 'NO' ORDER BY column_id
+  [1m[36mSequence (1.8ms)[0m  [1mselect us.sequence_name from all_sequences us where us.sequence_owner = 'ISTOCK' and us.sequence_name = 'BARCODE_SEQ'[0m
+  [1m[35mPrimary Key (7.5ms)[0m  SELECT cc.column_name FROM all_constraints c, all_cons_columns cc WHERE c.owner = 'ISTOCK' AND c.table_name = 'BARCODE' AND c.constraint_type = 'P' AND cc.owner = c.owner AND cc.constraint_name = c.constraint_name
+  [1m[36m (13.0ms)[0m  [1mSELECT temporary FROM user_tables WHERE table_name = 'BARCODE'[0m
+  [1m[35m (14.4ms)[0m              SELECT comments FROM all_tab_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+
+  [1m[36m (12.5ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'UUID'
+[0m
+  [1m[35m (11.3ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'NAME'
+
+  [1m[36m (1.3ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'STOCK_MASTER_ID'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'PARENT_ID'
+
+  [1m[36m (0.7ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'CHILD'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'OLD_ID'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'LGORT'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'STATUS'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'MENGE'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'CREATED_AT'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'UPDATED_AT'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'STORAGE'
+
+  [1m[36m (1.2ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'BARCODE'
+              AND column_name = 'SEQ'
+[0m
+  [1m[35m (15.8ms)[0m  SELECT LOWER(default_tablespace) FROM user_users WHERE username = SYS_CONTEXT('userenv', 'current_schema')
+  [1m[36m (1275.7ms)[0m  [1mSELECT LOWER(i.table_name) AS table_name, LOWER(i.index_name) AS index_name, i.uniqueness, i.index_type, i.ityp_owner, i.ityp_name, i.parameters, LOWER(i.tablespace_name) AS tablespace_name, LOWER(c.column_name) AS column_name, e.column_expression, atc.virtual_column FROM all_indexes i JOIN all_ind_columns c ON c.index_name = i.index_name AND c.index_owner = i.owner LEFT OUTER JOIN all_ind_expressions e ON e.index_name = i.index_name AND e.index_owner = i.owner AND e.column_position = c.column_position LEFT OUTER JOIN all_tab_cols atc ON i.table_name = atc.table_name AND c.column_name = atc.column_name AND i.owner = atc.owner AND atc.hidden_column = 'NO' WHERE i.owner = 'ISTOCK' AND i.table_owner = 'ISTOCK' AND NOT EXISTS (SELECT uc.index_name FROM all_constraints uc WHERE uc.index_name = i.index_name AND uc.owner = i.owner AND uc.constraint_type = 'P') ORDER BY i.index_name, c.column_position[0m
+  [1m[35mPrimary Key Trigger (2.2ms)[0m            SELECT trigger_name
+          FROM all_triggers
+          WHERE owner = 'ISTOCK'
+            AND trigger_name = 'BARCODE_PKT'
+            AND table_owner = 'ISTOCK'
+            AND table_name = 'BARCODE'
+            AND status = 'ENABLED'
+
+  [1m[36m (4.5ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'PRINTER' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mSequence (0.8ms)[0m  select us.sequence_name from all_sequences us where us.sequence_owner = 'ISTOCK' and us.sequence_name = 'PRINTER_SEQ'
+  [1m[36mPrimary Key (3.5ms)[0m  [1mSELECT cc.column_name FROM all_constraints c, all_cons_columns cc WHERE c.owner = 'ISTOCK' AND c.table_name = 'PRINTER' AND c.constraint_type = 'P' AND cc.owner = c.owner AND cc.constraint_name = c.constraint_name[0m
+  [1m[35m (14.2ms)[0m  SELECT temporary FROM user_tables WHERE table_name = 'PRINTER'
+  [1m[36m (9.8ms)[0m  [1m            SELECT comments FROM all_tab_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'PRINTER'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'PRINTER'
+              AND column_name = 'UUID'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'PRINTER'
+              AND column_name = 'CODE'
+[0m
+  [1m[35m (1.2ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'PRINTER'
+              AND column_name = 'NAME'
+
+  [1m[36m (1.3ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'PRINTER'
+              AND column_name = 'IP'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'PRINTER'
+              AND column_name = 'PORT'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'PRINTER'
+              AND column_name = 'CREATOR_ID'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'PRINTER'
+              AND column_name = 'UPDATER_ID'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'PRINTER'
+              AND column_name = 'CREATED_AT'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'PRINTER'
+              AND column_name = 'UPDATED_AT'
+
+  [1m[36mPrimary Key Trigger (1.1ms)[0m  [1m          SELECT trigger_name
+          FROM all_triggers
+          WHERE owner = 'ISTOCK'
+            AND trigger_name = 'PRINTER_PKT'
+            AND table_owner = 'ISTOCK'
+            AND table_name = 'PRINTER'
+            AND status = 'ENABLED'
+[0m
+  [1m[35m (8.0ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'STOCK_MASTER' AND hidden_column = 'NO' ORDER BY column_id
+  [1m[36mSequence (1.0ms)[0m  [1mselect us.sequence_name from all_sequences us where us.sequence_owner = 'ISTOCK' and us.sequence_name = 'STOCK_MASTER_SEQ'[0m
+  [1m[35mPrimary Key (5.1ms)[0m  SELECT cc.column_name FROM all_constraints c, all_cons_columns cc WHERE c.owner = 'ISTOCK' AND c.table_name = 'STOCK_MASTER' AND c.constraint_type = 'P' AND cc.owner = c.owner AND cc.constraint_name = c.constraint_name
+  [1m[36m (4.0ms)[0m  [1mSELECT temporary FROM user_tables WHERE table_name = 'STOCK_MASTER'[0m
+  [1m[35m (1.3ms)[0m              SELECT comments FROM all_tab_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'UUID'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'MATNR'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'MAKTX'
+[0m
+  [1m[35m (1.2ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'MATKL'
+
+  [1m[36m (1.4ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'CHARG'
+[0m
+  [1m[35m (1.3ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'MENGE'
+
+  [1m[36m (1.2ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'BOX_CNT'
+[0m
+  [1m[35m (1.5ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'PALLET_CNT'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'WERKS'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'MEINS'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'MJAHR'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'MBLNR'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'ZEILE'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'AUFNR'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'PRDLN'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'EBELN'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'EBELP'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'CREATED_AT'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'UPDATED_AT'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'DATECODE'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_MASTER'
+              AND column_name = 'BUDAT'
+[0m
+  [1m[35mPrimary Key Trigger (1.1ms)[0m            SELECT trigger_name
+          FROM all_triggers
+          WHERE owner = 'ISTOCK'
+            AND trigger_name = 'STOCK_MASTER_PKT'
+            AND table_owner = 'ISTOCK'
+            AND table_name = 'STOCK_MASTER'
+            AND status = 'ENABLED'
+
+  [1m[36m (9.3ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'STOCK_TRAN' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mSequence (0.8ms)[0m  select us.sequence_name from all_sequences us where us.sequence_owner = 'ISTOCK' and us.sequence_name = 'STOCK_TRAN_SEQ'
+  [1m[36mPrimary Key (3.8ms)[0m  [1mSELECT cc.column_name FROM all_constraints c, all_cons_columns cc WHERE c.owner = 'ISTOCK' AND c.table_name = 'STOCK_TRAN' AND c.constraint_type = 'P' AND cc.owner = c.owner AND cc.constraint_name = c.constraint_name[0m
+  [1m[35m (3.9ms)[0m  SELECT temporary FROM user_tables WHERE table_name = 'STOCK_TRAN'
+  [1m[36m (0.8ms)[0m  [1m            SELECT comments FROM all_tab_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+[0m
+  [1m[35m (0.8ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'UUID'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'MASTER_ID'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'BARCODE_ID'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'LGORT_OLD'
+[0m
+  [1m[35m (0.9ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'LGORT'
+
+  [1m[36m (0.9ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'STATUS'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'MENGE'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'VBELN'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'POSNR'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'MEINS'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'MJAHR'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'MBLNR'
+[0m
+  [1m[35m (1.3ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'ZEILE'
+
+  [1m[36m (1.3ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'AUFNR'
+[0m
+  [1m[35m (1.4ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'PRDLN'
+
+  [1m[36m (1.3ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'EBELN'
+[0m
+  [1m[35m (1.5ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'EBELP'
+
+  [1m[36m (1.5ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'MTYPE'
+[0m
+  [1m[35m (1.5ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'CREATED_BY'
+
+  [1m[36m (1.6ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'CREATED_IP'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'CREATED_MAC'
+
+  [1m[36m (1.0ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'UPDATED_BY'
+[0m
+  [1m[35m (1.0ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'UPDATED_IP'
+
+  [1m[36m (1.1ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'UPDATED_MAC'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'CREATED_AT'
+
+  [1m[36m (1.2ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'STOCK_TRAN'
+              AND column_name = 'UPDATED_AT'
+[0m
+  [1m[35mPrimary Key Trigger (1.1ms)[0m            SELECT trigger_name
+          FROM all_triggers
+          WHERE owner = 'ISTOCK'
+            AND trigger_name = 'STOCK_TRAN_PKT'
+            AND table_owner = 'ISTOCK'
+            AND table_name = 'STOCK_TRAN'
+            AND status = 'ENABLED'
+
+  [1m[36m (7.1ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'USER' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mSequence (1.1ms)[0m  select us.sequence_name from all_sequences us where us.sequence_owner = 'ISTOCK' and us.sequence_name = 'USER_SEQ'
+  [1m[36mPrimary Key (3.0ms)[0m  [1mSELECT cc.column_name FROM all_constraints c, all_cons_columns cc WHERE c.owner = 'ISTOCK' AND c.table_name = 'USER' AND c.constraint_type = 'P' AND cc.owner = c.owner AND cc.constraint_name = c.constraint_name[0m
+  [1m[35m (2.9ms)[0m  SELECT temporary FROM user_tables WHERE table_name = 'USER'
+  [1m[36m (1.5ms)[0m  [1m            SELECT comments FROM all_tab_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+[0m
+  [1m[35m (1.4ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'UUID'
+
+  [1m[36m (1.7ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'EMAIL'
+[0m
+  [1m[35m (1.2ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'ENCRYPTED_PASSWORD'
+
+  [1m[36m (1.5ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'RESET_PASSWORD_TOKEN'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'RESET_PASSWORD_SENT_AT'
+
+  [1m[36m (2.3ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'REMEMBER_CREATED_AT'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'SIGN_IN_COUNT'
+
+  [1m[36m (1.5ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'CURRENT_SIGN_IN_AT'
+[0m
+  [1m[35m (1.2ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'LAST_SIGN_IN_AT'
+
+  [1m[36m (1.3ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'CURRENT_SIGN_IN_IP'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'LAST_SIGN_IN_IP'
+
+  [1m[36m (1.6ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'CREATED_AT'
+[0m
+  [1m[35m (1.1ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'UPDATED_AT'
+
+  [1m[36m (1.6ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'USERNAME'
+[0m
+  [1m[35m (1.4ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'ROLE'
+
+  [1m[36m (1.4ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'SUPPLIER_ID'
+[0m
+  [1m[35m (1.3ms)[0m              SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'TERRITORY'
+
+  [1m[36m (1.3ms)[0m  [1m            SELECT comments FROM all_col_comments
+            WHERE owner = 'ISTOCK'
+              AND table_name = 'USER'
+              AND column_name = 'PRINTER_ID'
+[0m
+  [1m[35mPrimary Key Trigger (1.3ms)[0m            SELECT trigger_name
+          FROM all_triggers
+          WHERE owner = 'ISTOCK'
+            AND trigger_name = 'USER_PKT'
+            AND table_owner = 'ISTOCK'
+            AND table_name = 'USER'
+            AND status = 'ENABLED'
+
+  [1m[36mForeign Keys (4390.9ms)[0m  [1m            SELECT r.table_name to_table
+                  ,rc.column_name references_column
+                  ,cc.column_name
+                  ,c.constraint_name name
+                  ,c.delete_rule
+              FROM user_constraints c, user_cons_columns cc,
+                   user_constraints r, user_cons_columns rc
+             WHERE c.owner = 'ISTOCK'
+               AND c.table_name = 'BARCODE'
+               AND c.constraint_type = 'R'
+               AND cc.owner = c.owner
+               AND cc.constraint_name = c.constraint_name
+               AND r.constraint_name = c.r_constraint_name
+               AND r.owner = c.owner
+               AND rc.owner = r.owner
+               AND rc.constraint_name = r.constraint_name
+               AND rc.position = cc.position
+            ORDER BY name, to_table, column_name, references_column
+[0m
+  [1m[35mForeign Keys (4383.1ms)[0m              SELECT r.table_name to_table
+                  ,rc.column_name references_column
+                  ,cc.column_name
+                  ,c.constraint_name name
+                  ,c.delete_rule
+              FROM user_constraints c, user_cons_columns cc,
+                   user_constraints r, user_cons_columns rc
+             WHERE c.owner = 'ISTOCK'
+               AND c.table_name = 'PRINTER'
+               AND c.constraint_type = 'R'
+               AND cc.owner = c.owner
+               AND cc.constraint_name = c.constraint_name
+               AND r.constraint_name = c.r_constraint_name
+               AND r.owner = c.owner
+               AND rc.owner = r.owner
+               AND rc.constraint_name = r.constraint_name
+               AND rc.position = cc.position
+            ORDER BY name, to_table, column_name, references_column
+
+  [1m[36mForeign Keys (1.6ms)[0m  [1m            SELECT r.table_name to_table
+                  ,rc.column_name references_column
+                  ,cc.column_name
+                  ,c.constraint_name name
+                  ,c.delete_rule
+              FROM user_constraints c, user_cons_columns cc,
+                   user_constraints r, user_cons_columns rc
+             WHERE c.owner = 'ISTOCK'
+               AND c.table_name = 'STOCK_MASTER'
+               AND c.constraint_type = 'R'
+               AND cc.owner = c.owner
+               AND cc.constraint_name = c.constraint_name
+               AND r.constraint_name = c.r_constraint_name
+               AND r.owner = c.owner
+               AND rc.owner = r.owner
+               AND rc.constraint_name = r.constraint_name
+               AND rc.position = cc.position
+            ORDER BY name, to_table, column_name, references_column
+[0m
+  [1m[35mForeign Keys (1.8ms)[0m              SELECT r.table_name to_table
+                  ,rc.column_name references_column
+                  ,cc.column_name
+                  ,c.constraint_name name
+                  ,c.delete_rule
+              FROM user_constraints c, user_cons_columns cc,
+                   user_constraints r, user_cons_columns rc
+             WHERE c.owner = 'ISTOCK'
+               AND c.table_name = 'STOCK_TRAN'
+               AND c.constraint_type = 'R'
+               AND cc.owner = c.owner
+               AND cc.constraint_name = c.constraint_name
+               AND r.constraint_name = c.r_constraint_name
+               AND r.owner = c.owner
+               AND rc.owner = r.owner
+               AND rc.constraint_name = r.constraint_name
+               AND rc.position = cc.position
+            ORDER BY name, to_table, column_name, references_column
+
+  [1m[36mForeign Keys (1.7ms)[0m  [1m            SELECT r.table_name to_table
+                  ,rc.column_name references_column
+                  ,cc.column_name
+                  ,c.constraint_name name
+                  ,c.delete_rule
+              FROM user_constraints c, user_cons_columns cc,
+                   user_constraints r, user_cons_columns rc
+             WHERE c.owner = 'ISTOCK'
+               AND c.table_name = 'USER'
+               AND c.constraint_type = 'R'
+               AND cc.owner = c.owner
+               AND cc.constraint_name = c.constraint_name
+               AND r.constraint_name = c.r_constraint_name
+               AND r.owner = c.owner
+               AND rc.owner = r.owner
+               AND rc.constraint_name = r.constraint_name
+               AND rc.position = cc.position
+            ORDER BY name, to_table, column_name, references_column
+[0m
+  [1m[35m (13.4ms)[0m  SELECT synonym_name, table_owner, table_name, db_link FROM user_synonyms
+
+
+Started GET "/" for 172.91.132.3 at 2016-03-07 11:19:38 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.91.132.3 at 2016-03-07 11:19:38 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36m (10.4ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'USER' AND hidden_column = 'NO' ORDER BY column_id[0m
+  Rendered devise/sessions/new.html.haml within layouts/application (62.1ms)
+  Rendered layouts/_navigation_links.html.haml (4.2ms)
+  Rendered layouts/_navigation.html.haml (10.9ms)
+  Rendered layouts/_messages.html.haml (30.5ms)
+Completed 200 OK in 642ms (Views: 467.5ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/assets/application.self-62c1555f508393391c92f71dc76d7fe4085d6990ff4bd78c8c936405e1005bbf.css?body=1" for 172.91.132.3 at 2016-03-07 11:19:39 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-b0fd7b6b1005da4ab62c0d14071c7d8072431b63aba07c27a8b7cdc7252e101f.js?body=1" for 172.91.132.3 at 2016-03-07 11:19:39 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/sign_in" for 172.91.132.3 at 2016-03-07 11:19:45 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NshnvJAOo/4yz9I+wizb1vb80B8kSW2w36IEpI2y5QE9wFmnsgS0HAAJk+nqynciNrvHiMbqX1YI7LzzoXrQOQ==", "user"=>{"email"=>"felix.jiang@l-e-i.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"系統登入"}
+  [1m[35mUser Load (3.1ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."EMAIL" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["email", "felix.jiang@l-e-i.com"]]
+Completed 401 Unauthorized in 133ms (ActiveRecord: 3.1ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NshnvJAOo/4yz9I+wizb1vb80B8kSW2w36IEpI2y5QE9wFmnsgS0HAAJk+nqynciNrvHiMbqX1YI7LzzoXrQOQ==", "user"=>{"email"=>"felix.jiang@l-e-i.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"系統登入"}
+  Rendered devise/sessions/new.html.haml within layouts/application (16.9ms)
+  Rendered layouts/_navigation_links.html.haml (2.3ms)
+  Rendered layouts/_navigation.html.haml (3.0ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 131ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 172.91.132.3 at 2016-03-07 11:20:25 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8LFkKI4IcM8fPXmIur7ppyovLAD0rh/RCQpI1Q4Fl/37uVozrAJnLS37OF+SWEVT6mg7lxYNLTfeRPCCIs2ixQ==", "user"=>{"email"=>"felix.jiang@l-e-i.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"系統登入"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."EMAIL" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["email", "felix.jiang@l-e-i.com"]]
+  [1m[35m (44.0ms)[0m  SELECT DECODE(table_name, UPPER(table_name), LOWER(table_name), table_name) FROM all_tables WHERE owner = SYS_CONTEXT('userenv', 'current_schema') AND secondary = 'N'
+  [1m[36mSQL (4.3ms)[0m  [1mUPDATE "USERS" SET "CURRENT_SIGN_IN_AT" = :a1, "CURRENT_SIGN_IN_IP" = :a2, "SIGN_IN_COUNT" = :a3, "UPDATED_AT" = :a4 WHERE "USERS"."UUID" = :a5[0m  [["current_sign_in_at", 2016-03-07 11:20:25 +0800], ["current_sign_in_ip", "172.91.132.3"], ["sign_in_count", 2], ["updated_at", 2016-03-07 11:20:25 +0800], ["uuid", "d8162d90c40f013380d070761c0991b1"]]
+Redirected to http://172.91.132.3:3000/
+Completed 302 Found in 323ms (ActiveRecord: 49.5ms)
+
+
+Started GET "/" for 172.91.132.3 at 2016-03-07 11:20:25 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VisitorsController#index as HTML
+  [1m[35mUser Load (2.5ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "USERS"[0m
+  Rendered visitors/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation_links.html.haml (1.7ms)
+  Rendered layouts/_navigation.html.haml (2.7ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 43ms (Views: 36.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/printers" for 172.91.132.3 at 2016-03-07 11:20:30 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrintersController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mPrinter Load (5.0ms)[0m  [1m
+              SELECT * FROM (
+                SELECT raw_sql_.*, rownum raw_rnum_
+                FROM (SELECT  "PRINTER".* FROM "PRINTER" ) raw_sql_
+                WHERE rownum <= 25
+              )
+              WHERE raw_rnum_ > 0[0m
+  [1m[35m (6.0ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'PRINTER' AND hidden_column = 'NO' ORDER BY column_id
+  [1m[36m (2.3ms)[0m  [1mSELECT COUNT(*) FROM "PRINTER"[0m
+  Rendered printers/index.html.haml within layouts/application (46.6ms)
+  Rendered layouts/_navigation_links.html.haml (0.6ms)
+  Rendered layouts/_navigation.html.haml (1.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 73ms (Views: 51.2ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/printers/588c02e0c3f80133af3e245e60e43101/edit" for 172.91.132.3 at 2016-03-07 11:20:37 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrintersController#edit as HTML
+  Parameters: {"id"=>"588c02e0c3f80133af3e245e60e43101"}
+  [1m[35mUser Load (2.3ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mPrinter Load (4.5ms)[0m  [1mSELECT  "PRINTER".* FROM "PRINTER" WHERE "PRINTER"."UUID" = :a1 AND ROWNUM <= 1 [0m  [["uuid", "588c02e0c3f80133af3e245e60e43101"]]
+  Rendered printers/_form.html.haml (28.0ms)
+  Rendered printers/edit.html.haml within layouts/application (36.8ms)
+  Rendered layouts/_navigation_links.html.haml (0.6ms)
+  Rendered layouts/_navigation.html.haml (2.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 67ms (Views: 53.3ms | ActiveRecord: 6.8ms)
+
+
+Started PATCH "/printers/588c02e0c3f80133af3e245e60e43101" for 172.91.132.3 at 2016-03-07 11:20:44 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrintersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"53A0z4w8yTv8NgUvg/z6/m/O9KWDWtxwie6nt6mtWZwQRoNQe3hZlmDEhUUd/6uCO1wyHnfMMTkmAqgdP6t2tA==", "printer"=>{"code"=>"PRT2", "name"=>"Printer # 2", "ip"=>"172.91.8.56", "port"=>"9100", "creator_id"=>"admin@l-e-i.com", "updater_id"=>"admin@l-e-i.com"}, "id"=>"588c02e0c3f80133af3e245e60e43101"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mPrinter Load (1.0ms)[0m  [1mSELECT  "PRINTER".* FROM "PRINTER" WHERE "PRINTER"."UUID" = :a1 AND ROWNUM <= 1 [0m  [["uuid", "588c02e0c3f80133af3e245e60e43101"]]
+  [1m[35mSQL (3.1ms)[0m  UPDATE "PRINTER" SET "NAME" = :a1, "UPDATED_AT" = :a2 WHERE "PRINTER"."UUID" = :a3  [["name", "Printer # 2"], ["updated_at", 2016-03-07 11:20:44 +0800], ["uuid", "588c02e0c3f80133af3e245e60e43101"]]
+Redirected to http://172.91.132.3:3000/printers
+Completed 302 Found in 47ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/printers" for 172.91.132.3 at 2016-03-07 11:20:44 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PrintersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[35mPrinter Load (3.5ms)[0m  
+              SELECT * FROM (
+                SELECT raw_sql_.*, rownum raw_rnum_
+                FROM (SELECT  "PRINTER".* FROM "PRINTER" ) raw_sql_
+                WHERE rownum <= 25
+              )
+              WHERE raw_rnum_ > 0
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "PRINTER"[0m
+  Rendered printers/index.html.haml within layouts/application (11.5ms)
+  Rendered layouts/_navigation_links.html.haml (0.8ms)
+  Rendered layouts/_navigation.html.haml (1.9ms)
+  Rendered layouts/_messages.html.haml (0.3ms)
+Completed 200 OK in 35ms (Views: 26.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/stock_masters" for 172.91.132.3 at 2016-03-08 10:20:05 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StockMastersController#index as HTML
+  [1m[35mUser Load (7.5ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mStockMaster Load (9.1ms)[0m  [1m
+              SELECT * FROM (
+                SELECT raw_sql_.*, rownum raw_rnum_
+                FROM (SELECT  "STOCK_MASTER".* FROM "STOCK_MASTER" ) raw_sql_
+                WHERE rownum <= 25
+              )
+              WHERE raw_rnum_ > 0[0m
+  [1m[35m (133.4ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'STOCK_MASTER' AND hidden_column = 'NO' ORDER BY column_id
+  [1m[36m (6.3ms)[0m  [1mSELECT COUNT(*) FROM "STOCK_MASTER"[0m
+  Rendered stock_masters/index.html.haml within layouts/application (195.8ms)
+  Rendered layouts/_navigation_links.html.haml (0.5ms)
+  Rendered layouts/_navigation.html.haml (1.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 225ms (Views: 59.7ms | ActiveRecord: 156.1ms)
+
+
+Started GET "/work_orders/receipt" for 172.91.132.3 at 2016-03-08 10:20:08 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#receipt as HTML
+  [1m[35mUser Load (6.4ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mSapdb Load (227.0ms)[0m  [1m
+      select a.rowid,
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+      where a.mandt='168' and a.vgart = 'WR' and a.budat = '20160308'
+        and usnam like '%%' and werks like '%%' and matnr like '%%'
+        and aufnr like '%%'
+        and werks in ('281A','381A')
+      order by mjahr desc, mblnr desc
+    [0m
+  [1m[35m (252.6ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'SAPSR3' AND table_name = 'TCSTR' AND hidden_column = 'NO' ORDER BY column_id
+  Rendered work_orders/receipt.html.haml within layouts/application (20.3ms)
+  Rendered layouts/_navigation_links.html.haml (0.6ms)
+  Rendered layouts/_navigation.html.haml (1.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 1392ms (Views: 38.8ms | ActiveRecord: 485.9ms)
+
+
+Started GET "/work_orders/AAANTaABfAAEIXhAAK/confirm_box_label" for 172.91.132.3 at 2016-03-08 10:20:12 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#confirm_box_label as HTML
+  Parameters: {"id"=>"AAANTaABfAAEIXhAAK"}
+  [1m[36mUser Load (6.7ms)[0m  [1mSELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[35mSapdb Load (128.0ms)[0m  
+      select
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr,g.psmng,g.wemng,c.matkl
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+        join sapsr3.afpo g on g.mandt=b.mandt and g.aufnr=b.aufnr
+      where a.mandt='168' and a.rowid='AAANTaABfAAEIXhAAK'  and rownum=1
+ 
+  [1m[36mSapdb Load (55.7ms)[0m  [1m
+      select e.packnr, e.pobjid,f.paitemtype,f.matnr,f.subpacknr,f.trgqty,f.baseunit,g.brgew,g.ntgew,g.gewei
+      from sapsr3.packkp e
+        join sapsr3.packpo f on f.mandt=e.mandt and f.packnr=e.packnr and f.inddel <> 'X'
+        left join sapsr3.mara g on g.mandt=f.mandt and g.matnr=f.matnr,
+        (
+          select e.packnr
+          from sapsr3.packkp e
+            join sapsr3.packpo f on f.mandt=e.mandt and f.packnr=e.packnr and f.inddel <> 'X'
+          where e.mandt='168' and e.pobjid like '2601012170100SUB00%' and f.matnr='2601012170100SUB00' and e.pobjid <> f.matnr
+        ) v
+      where e.packnr = v.packnr or f.subpacknr = v.packnr and e.pobjid like '2601012170100SUB00%'
+    [0m
+  [1m[35mPrinter Load (8.1ms)[0m  SELECT "PRINTER"."UUID", "PRINTER"."CODE" FROM "PRINTER"
+  Rendered work_orders/confirm_box_label.html.haml within layouts/application (28.4ms)
+  Rendered layouts/_navigation_links.html.haml (0.7ms)
+  Rendered layouts/_navigation.html.haml (1.6ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 314ms (Views: 33.1ms | ActiveRecord: 198.5ms)
+
+
+Started POST "/work_orders/AAANTaABfAAEIXhAAK/print_box_label" for 172.91.132.3 at 2016-03-08 10:20:22 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#print_box_label as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vTz6r+3Yl+ocAqeDjYlb5A7v7xr8MK/QlNsE/dDrLHtKCk0wGpwHR4DwJ+kTigqYWn0poQimQpk7NwtXRu0DUw==", "mblnr"=>"4907025185", "mjahr"=>"2016", "box_qty"=>"2", "no_of_box1"=>"1", "total_qty1"=>"2", "box_qty2"=>"0", "no_of_box2"=>"0", "total_qty2"=>"0", "pallet_qty"=>"1", "no_of_pallet1"=>"1", "total_box1"=>"1", "pallet_qty2"=>"0", "no_of_pallet2"=>"0", "total_box2"=>"0", "printer_id"=>"69a6d1c0c3ee0133af3d245e60e43101", "id"=>"AAANTaABfAAEIXhAAK"}
+  [1m[36mUser Load (6.6ms)[0m  [1mSELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[35mSapdb Load (57.2ms)[0m  
+      select
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr,g.psmng,g.wemng,c.matkl
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+        join sapsr3.afpo g on g.mandt=b.mandt and g.aufnr=b.aufnr
+      where a.mandt='168' and a.rowid='AAANTaABfAAEIXhAAK'  and rownum=1
+ 
+  [1m[36mStockMaster Load (10.6ms)[0m  [1mSELECT * FROM (SELECT  "STOCK_MASTER".* FROM "STOCK_MASTER" WHERE "STOCK_MASTER"."MJAHR" = :a1 AND "STOCK_MASTER"."MBLNR" = :a2  ORDER BY "STOCK_MASTER"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["mjahr", "2016"], ["mblnr", "4907025185"]]
+  [1m[35mSQL (8.6ms)[0m  INSERT INTO "STOCK_MASTER" ("MATNR", "MAKTX", "MATKL", "CHARG", "MENGE", "BOX_CNT", "PALLET_CNT", "WERKS", "MEINS", "MJAHR", "MBLNR", "AUFNR", "DATECODE", "BUDAT", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10, :a11, :a12, :a13, :a14, :a15, :a16, :a17)  [["matnr", "2601012170100SUB00"], ["maktx", "DCCORD 2468 #24 18-PL-5 BLK 1500 058a01自"], ["matkl", "OSW"], ["charg", "6C2102002O"], ["menge", 10560], ["box_cnt", 1], ["pallet_cnt", 1], ["werks", "381A"], ["meins", "EA"], ["mjahr", "2016"], ["mblnr", "4907025185"], ["aufnr", "001100097858"], ["datecode", "1611"], ["budat", "20160308"], ["created_at", 2016-03-08 10:20:23 +0800], ["updated_at", 2016-03-08 10:20:23 +0800], ["uuid", "3c7d3010c70201336fee40f2e9981332"]]
+  [1m[36m (86.9ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'BARCODE' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mSQL (93.9ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "3c7d3010c70201336fee40f2e9981332"], ["name", "pallet"], ["parent_id", "0"], ["child", "t"], ["lgort", "EBHP"], ["status", "created"], ["menge", 0], ["created_at", 2016-03-08 10:20:23 +0800], ["updated_at", 2016-03-08 10:20:23 +0800], ["uuid", "3c8f7930c70201336fef40f2e9981332"]]
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "3c7d3010c70201336fee40f2e9981332"], ["name", "box"], ["parent_id", "3c8f7930c70201336fef40f2e9981332"], ["child", "t"], ["lgort", "EBHP"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:20:23 +0800], ["updated_at", 2016-03-08 10:20:23 +0800], ["uuid", "3c9ec490c70201336ff040f2e9981332"]]
+  [1m[35mPrinter Load (7.7ms)[0m  SELECT  "PRINTER".* FROM "PRINTER" WHERE "PRINTER"."UUID" = :a1 AND ROWNUM <= 1   [["uuid", "69a6d1c0c3ee0133af3d245e60e43101"]]
+  [1m[36mBarcode Load (8.4ms)[0m  [1mSELECT "BARCODE".* FROM "BARCODE" WHERE "BARCODE"."STOCK_MASTER_ID" = :a1[0m  [["stock_master_id", "3c7d3010c70201336fee40f2e9981332"]]
+Redirected to http://172.91.132.3:3000/work_orders/receipt
+Completed 302 Found in 432ms (ActiveRecord: 286.3ms)
+
+
+Started GET "/work_orders/receipt" for 172.91.132.3 at 2016-03-08 10:20:23 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#receipt as HTML
+  [1m[35mUser Load (6.3ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mSapdb Load (63.7ms)[0m  [1m
+      select a.rowid,
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+      where a.mandt='168' and a.vgart = 'WR' and a.budat = '20160308'
+        and usnam like '%%' and werks like '%%' and matnr like '%%'
+        and aufnr like '%%'
+        and werks in ('281A','381A')
+      order by mjahr desc, mblnr desc
+    [0m
+  Rendered work_orders/receipt.html.haml within layouts/application (4.4ms)
+  Rendered layouts/_navigation_links.html.haml (0.5ms)
+  Rendered layouts/_navigation.html.haml (1.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 131ms (Views: 14.2ms | ActiveRecord: 69.9ms)
+
+
+Started GET "/work_orders/receipt" for 172.91.132.3 at 2016-03-08 10:44:44 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#receipt as HTML
+  [1m[35m (125.1ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'USER' AND hidden_column = 'NO' ORDER BY column_id
+  [1m[36mUser Load (7.5ms)[0m  [1mSELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[35mSapdb Load (308.4ms)[0m  
+      select a.rowid,
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+      where a.mandt='168' and a.vgart = 'WR' and a.budat = '20160308'
+        and usnam like '%%' and werks like '%%' and matnr like '%%'
+        and aufnr like '%%'
+        and werks in ('281A','381A')
+      order by mjahr desc, mblnr desc
+    
+  [1m[36m (312.7ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'SAPSR3' AND table_name = 'TCSTR' AND hidden_column = 'NO' ORDER BY column_id[0m
+  Rendered work_orders/receipt.html.haml within layouts/application (8.7ms)
+  Rendered layouts/_navigation_links.html.haml (0.5ms)
+  Rendered layouts/_navigation.html.haml (4.3ms)
+  Rendered layouts/_messages.html.haml (0.2ms)
+Completed 200 OK in 2286ms (Views: 32.3ms | ActiveRecord: 753.7ms)
+
+
+Started GET "/work_orders/AAANTaABfAAEIXhAAy/confirm_box_label" for 172.91.132.3 at 2016-03-08 10:44:51 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#confirm_box_label as HTML
+  Parameters: {"id"=>"AAANTaABfAAEIXhAAy"}
+  [1m[35mUser Load (7.3ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mSapdb Load (88.8ms)[0m  [1m
+      select
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr,g.psmng,g.wemng,c.matkl
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+        join sapsr3.afpo g on g.mandt=b.mandt and g.aufnr=b.aufnr
+      where a.mandt='168' and a.rowid='AAANTaABfAAEIXhAAy'  and rownum=1
+ [0m
+  [1m[35mSapdb Load (648.3ms)[0m  
+      select e.packnr, e.pobjid,f.paitemtype,f.matnr,f.subpacknr,f.trgqty,f.baseunit,g.brgew,g.ntgew,g.gewei
+      from sapsr3.packkp e
+        join sapsr3.packpo f on f.mandt=e.mandt and f.packnr=e.packnr and f.inddel <> 'X'
+        left join sapsr3.mara g on g.mandt=f.mandt and g.matnr=f.matnr,
+        (
+          select e.packnr
+          from sapsr3.packkp e
+            join sapsr3.packpo f on f.mandt=e.mandt and f.packnr=e.packnr and f.inddel <> 'X'
+          where e.mandt='168' and e.pobjid like 'MU07-31052-A00G%' and f.matnr='MU07-31052-A00G' and e.pobjid <> f.matnr
+        ) v
+      where e.packnr = v.packnr or f.subpacknr = v.packnr and e.pobjid like 'MU07-31052-A00G%'
+    
+  [1m[36m (70.1ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'PRINTER' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mPrinter Load (6.6ms)[0m  SELECT "PRINTER"."UUID", "PRINTER"."CODE" FROM "PRINTER"
+  Rendered work_orders/confirm_box_label.html.haml within layouts/application (97.1ms)
+  Rendered layouts/_navigation_links.html.haml (0.5ms)
+  Rendered layouts/_navigation.html.haml (1.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 911ms (Views: 31.3ms | ActiveRecord: 821.1ms)
+
+
+Started POST "/work_orders/AAANTaABfAAEIXhAAy/print_box_label" for 172.91.132.3 at 2016-03-08 10:45:06 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#print_box_label as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xjcKc8SeNHw5rFuDsoHfxExOHtyr/gGODg3FGdo1V74xAb3sM9qk0aVe2+ksgo64GNzYZ19o7Meh4cqzTDN4lg==", "mblnr"=>"4907025334", "mjahr"=>"2016", "box_qty"=>"2", "no_of_box1"=>"1", "total_qty1"=>"2", "box_qty2"=>"0", "no_of_box2"=>"0", "total_qty2"=>"0", "pallet_qty"=>"28", "no_of_pallet1"=>"0", "total_box1"=>"0", "pallet_qty2"=>"25", "no_of_pallet2"=>"1", "total_box2"=>"25", "printer_id"=>"69a6d1c0c3ee0133af3d245e60e43101", "id"=>"AAANTaABfAAEIXhAAy"}
+  [1m[36mUser Load (6.4ms)[0m  [1mSELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[35mSapdb Load (57.6ms)[0m  
+      select
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr,g.psmng,g.wemng,c.matkl
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+        join sapsr3.afpo g on g.mandt=b.mandt and g.aufnr=b.aufnr
+      where a.mandt='168' and a.rowid='AAANTaABfAAEIXhAAy'  and rownum=1
+ 
+  [1m[36m (149.9ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'STOCK_MASTER' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mStockMaster Load (6.8ms)[0m  SELECT * FROM (SELECT  "STOCK_MASTER".* FROM "STOCK_MASTER" WHERE "STOCK_MASTER"."MJAHR" = :a1 AND "STOCK_MASTER"."MBLNR" = :a2  ORDER BY "STOCK_MASTER"."UUID" ASC ) WHERE ROWNUM <= 1  [["mjahr", "2016"], ["mblnr", "4907025334"]]
+  [1m[36m (38.0ms)[0m  [1mSELECT DECODE(table_name, UPPER(table_name), LOWER(table_name), table_name) FROM all_tables WHERE owner = SYS_CONTEXT('userenv', 'current_schema') AND secondary = 'N'[0m
+  [1m[35mSQL (7.8ms)[0m  INSERT INTO "STOCK_MASTER" ("MATNR", "MAKTX", "MATKL", "CHARG", "MENGE", "BOX_CNT", "PALLET_CNT", "WERKS", "MEINS", "MJAHR", "MBLNR", "AUFNR", "DATECODE", "BUDAT", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10, :a11, :a12, :a13, :a14, :a15, :a16, :a17)  [["matnr", "MU07-31052-A00G"], ["maktx", "MU07-3052125-A1 SONY"], ["matkl", "SWMA"], ["charg", "6C7908002K"], ["menge", 2500], ["box_cnt", 1], ["pallet_cnt", 1], ["werks", "381A"], ["meins", "EA"], ["mjahr", "2016"], ["mblnr", "4907025334"], ["aufnr", "001100097742"], ["datecode", "1611"], ["budat", "20160308"], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b0f7f4a0c70501336ff140f2e9981332"]]
+  [1m[36m (95.5ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'BARCODE' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mSQL (8.0ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "pallet"], ["parent_id", "0"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 0], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b112f160c70501336ff240f2e9981332"]]
+  [1m[36mSQL (7.8ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b115dc30c70501336ff340f2e9981332"]]
+  [1m[35mSQL (7.4ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b11a0af0c70501336ff440f2e9981332"]]
+  [1m[36mSQL (7.7ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b11b8400c70501336ff540f2e9981332"]]
+  [1m[35mSQL (7.3ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b11d0020c70501336ff640f2e9981332"]]
+  [1m[36mSQL (6.8ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b1202550c70501336ff740f2e9981332"]]
+  [1m[35mSQL (8.8ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b1217e00c70501336ff840f2e9981332"]]
+  [1m[36mSQL (7.2ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b123a2e0c70501336ff940f2e9981332"]]
+  [1m[35mSQL (7.3ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b1272410c70501336ffa40f2e9981332"]]
+  [1m[36mSQL (6.7ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b129b030c70501336ffb40f2e9981332"]]
+  [1m[35mSQL (7.3ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b12b10e0c70501336ffc40f2e9981332"]]
+  [1m[36mSQL (7.3ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b12e2140c70501336ffd40f2e9981332"]]
+  [1m[35mSQL (6.9ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b12fc8b0c70501336ffe40f2e9981332"]]
+  [1m[36mSQL (6.8ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b1312d70c70501336fff40f2e9981332"]]
+  [1m[35mSQL (6.9ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b1328cc0c7050133700040f2e9981332"]]
+  [1m[36mSQL (7.8ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b136db80c7050133700140f2e9981332"]]
+  [1m[35mSQL (7.1ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b1388410c7050133700240f2e9981332"]]
+  [1m[36mSQL (8.2ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b13a1f60c7050133700340f2e9981332"]]
+  [1m[35mSQL (6.8ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b13bac70c7050133700440f2e9981332"]]
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b13cfe40c7050133700540f2e9981332"]]
+  [1m[35mSQL (8.0ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b13e5b30c7050133700640f2e9981332"]]
+  [1m[36mSQL (7.7ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b13fdb50c7050133700740f2e9981332"]]
+  [1m[35mSQL (6.6ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b1415150c7050133700840f2e9981332"]]
+  [1m[36mSQL (7.7ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b1429d70c7050133700940f2e9981332"]]
+  [1m[35mSQL (7.7ms)[0m  INSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b14411b0c7050133700a40f2e9981332"]]
+  [1m[36mSQL (6.6ms)[0m  [1mINSERT INTO "BARCODE" ("STOCK_MASTER_ID", "NAME", "PARENT_ID", "CHILD", "LGORT", "STATUS", "MENGE", "CREATED_AT", "UPDATED_AT", "UUID") VALUES (:a1, :a2, :a3, :a4, :a5, :a6, :a7, :a8, :a9, :a10)[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"], ["name", "box"], ["parent_id", "b112f160c70501336ff240f2e9981332"], ["child", "t"], ["lgort", "FG02"], ["status", "created"], ["menge", 2], ["created_at", 2016-03-08 10:45:07 +0800], ["updated_at", 2016-03-08 10:45:07 +0800], ["uuid", "b14586a0c7050133700b40f2e9981332"]]
+  [1m[35mPrinter Load (6.2ms)[0m  SELECT  "PRINTER".* FROM "PRINTER" WHERE "PRINTER"."UUID" = :a1 AND ROWNUM <= 1   [["uuid", "69a6d1c0c3ee0133af3d245e60e43101"]]
+  [1m[36mBarcode Load (10.5ms)[0m  [1mSELECT "BARCODE".* FROM "BARCODE" WHERE "BARCODE"."STOCK_MASTER_ID" = :a1[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"]]
+Redirected to http://172.91.132.3:3000/work_orders/receipt
+Completed 302 Found in 866ms (ActiveRecord: 570.2ms)
+
+
+Started GET "/work_orders/receipt" for 172.91.132.3 at 2016-03-08 10:45:07 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#receipt as HTML
+  [1m[35mUser Load (6.4ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mSapdb Load (82.6ms)[0m  [1m
+      select a.rowid,
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+      where a.mandt='168' and a.vgart = 'WR' and a.budat = '20160308'
+        and usnam like '%%' and werks like '%%' and matnr like '%%'
+        and aufnr like '%%'
+        and werks in ('281A','381A')
+      order by mjahr desc, mblnr desc
+    [0m
+  Rendered work_orders/receipt.html.haml within layouts/application (8.4ms)
+  Rendered layouts/_navigation_links.html.haml (10.7ms)
+  Rendered layouts/_navigation.html.haml (11.4ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 180ms (Views: 28.8ms | ActiveRecord: 89.0ms)
+
+
+Started GET "/work_orders/receipt" for 172.91.132.3 at 2016-03-08 10:51:48 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#receipt as HTML
+  [1m[35m (10.1ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'USER' AND hidden_column = 'NO' ORDER BY column_id
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[35mSapdb Load (75.4ms)[0m  
+      select a.rowid,
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+      where a.mandt='168' and a.vgart = 'WR' and a.budat = '20160308'
+        and usnam like '%%' and werks like '%%' and matnr like '%%'
+        and aufnr like '%%'
+        and werks in ('281A','381A')
+      order by mjahr desc, mblnr desc
+    
+  [1m[36m (302.7ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'SAPSR3' AND table_name = 'TCSTR' AND hidden_column = 'NO' ORDER BY column_id[0m
+  Rendered work_orders/receipt.html.haml within layouts/application (9.9ms)
+  Rendered layouts/_navigation_links.html.haml (0.6ms)
+  Rendered layouts/_navigation.html.haml (3.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 1512ms (Views: 33.5ms | ActiveRecord: 389.7ms)
+
+
+Started GET "/work_orders/AAANTaABfAAEIXhAAy/confirm_box_label" for 172.91.132.3 at 2016-03-08 10:52:08 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#confirm_box_label as HTML
+  Parameters: {"id"=>"AAANTaABfAAEIXhAAy"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mSapdb Load (49.5ms)[0m  [1m
+      select
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr,g.psmng,g.wemng,c.matkl
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+        join sapsr3.afpo g on g.mandt=b.mandt and g.aufnr=b.aufnr
+      where a.mandt='168' and a.rowid='AAANTaABfAAEIXhAAy'  and rownum=1
+ [0m
+  [1m[35mSapdb Load (556.9ms)[0m  
+      select e.packnr, e.pobjid,f.paitemtype,f.matnr,f.subpacknr,f.trgqty,f.baseunit,g.brgew,g.ntgew,g.gewei
+      from sapsr3.packkp e
+        join sapsr3.packpo f on f.mandt=e.mandt and f.packnr=e.packnr and f.inddel <> 'X'
+        left join sapsr3.mara g on g.mandt=f.mandt and g.matnr=f.matnr,
+        (
+          select e.packnr
+          from sapsr3.packkp e
+            join sapsr3.packpo f on f.mandt=e.mandt and f.packnr=e.packnr and f.inddel <> 'X'
+          where e.mandt='168' and e.pobjid like 'MU07-31052-A00G%' and f.matnr='MU07-31052-A00G' and e.pobjid <> f.matnr
+        ) v
+      where e.packnr = v.packnr or f.subpacknr = v.packnr and e.pobjid like 'MU07-31052-A00G%'
+    
+  [1m[36m (7.9ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'PRINTER' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mPrinter Load (1.0ms)[0m  SELECT "PRINTER"."UUID", "PRINTER"."CODE" FROM "PRINTER"
+  Rendered work_orders/confirm_box_label.html.haml within layouts/application (25.9ms)
+  Rendered layouts/_navigation_links.html.haml (0.7ms)
+  Rendered layouts/_navigation.html.haml (1.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 715ms (Views: 31.2ms | ActiveRecord: 616.5ms)
+
+
+Started POST "/work_orders/AAANTaABfAAEIXhAAy/print_box_label" for 172.91.132.3 at 2016-03-08 10:53:59 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#print_box_label as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZsQMtzsjnGogBo5tCTZ9Jef+LahSGEg0JtP+kEgP5wyR8rsozGcMx7z0DgeXNSxZs2zrE6aOpX2JP/E63gnIJA==", "mblnr"=>"4907025334", "mjahr"=>"2016", "box_qty"=>"2", "no_of_box1"=>"1", "total_qty1"=>"2", "box_qty2"=>"0", "no_of_box2"=>"0", "total_qty2"=>"0", "pallet_qty"=>"28", "no_of_pallet1"=>"0", "total_box1"=>"0", "pallet_qty2"=>"0", "no_of_pallet2"=>"0", "total_box2"=>"0", "printer_id"=>"69a6d1c0c3ee0133af3d245e60e43101", "id"=>"AAANTaABfAAEIXhAAy"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[35mSapdb Load (48.9ms)[0m  
+      select
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr,g.psmng,g.wemng,c.matkl
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+        join sapsr3.afpo g on g.mandt=b.mandt and g.aufnr=b.aufnr
+      where a.mandt='168' and a.rowid='AAANTaABfAAEIXhAAy'  and rownum=1
+ 
+  [1m[36m (9.8ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'STOCK_MASTER' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mStockMaster Load (1.1ms)[0m  SELECT * FROM (SELECT  "STOCK_MASTER".* FROM "STOCK_MASTER" WHERE "STOCK_MASTER"."MJAHR" = :a1 AND "STOCK_MASTER"."MBLNR" = :a2  ORDER BY "STOCK_MASTER"."UUID" ASC ) WHERE ROWNUM <= 1  [["mjahr", "2016"], ["mblnr", "4907025334"]]
+  [1m[36mPrinter Load (0.9ms)[0m  [1mSELECT  "PRINTER".* FROM "PRINTER" WHERE "PRINTER"."UUID" = :a1 AND ROWNUM <= 1 [0m  [["uuid", "69a6d1c0c3ee0133af3d245e60e43101"]]
+  [1m[35m (5.5ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'BARCODE' AND hidden_column = 'NO' ORDER BY column_id
+  [1m[36mBarcode Load (3.9ms)[0m  [1mSELECT "BARCODE".* FROM "BARCODE" WHERE "BARCODE"."STOCK_MASTER_ID" = :a1[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"]]
+Redirected to http://172.91.132.3:3000/work_orders/receipt
+Completed 302 Found in 174ms (ActiveRecord: 71.3ms)
+
+
+Started GET "/work_orders/receipt" for 172.91.132.3 at 2016-03-08 10:53:59 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#receipt as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mSapdb Load (63.9ms)[0m  [1m
+      select a.rowid,
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+      where a.mandt='168' and a.vgart = 'WR' and a.budat = '20160308'
+        and usnam like '%%' and werks like '%%' and matnr like '%%'
+        and aufnr like '%%'
+        and werks in ('281A','381A')
+      order by mjahr desc, mblnr desc
+    [0m
+  Rendered work_orders/receipt.html.haml within layouts/application (15.0ms)
+  Rendered layouts/_navigation_links.html.haml (0.8ms)
+  Rendered layouts/_navigation.html.haml (1.8ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 139ms (Views: 30.2ms | ActiveRecord: 64.9ms)
+
+
+Started GET "/work_orders/receipt" for 172.91.132.3 at 2016-03-08 11:00:54 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#receipt as HTML
+  [1m[35m (10.4ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'USER' AND hidden_column = 'NO' ORDER BY column_id
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[35mSapdb Load (63.9ms)[0m  
+      select a.rowid,
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+      where a.mandt='168' and a.vgart = 'WR' and a.budat = '20160308'
+        and usnam like '%%' and werks like '%%' and matnr like '%%'
+        and aufnr like '%%'
+        and werks in ('281A','381A')
+      order by mjahr desc, mblnr desc
+    
+  [1m[36m (294.0ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'SAPSR3' AND table_name = 'TCSTR' AND hidden_column = 'NO' ORDER BY column_id[0m
+  Rendered work_orders/receipt.html.haml within layouts/application (8.7ms)
+  Rendered layouts/_navigation_links.html.haml (0.5ms)
+  Rendered layouts/_navigation.html.haml (1.2ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 1406ms (Views: 24.2ms | ActiveRecord: 369.4ms)
+
+
+Started GET "/work_orders/AAANTaABfAAEIXhAAy/confirm_box_label" for 172.91.132.3 at 2016-03-08 11:00:57 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#confirm_box_label as HTML
+  Parameters: {"id"=>"AAANTaABfAAEIXhAAy"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mSapdb Load (70.7ms)[0m  [1m
+      select
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr,g.psmng,g.wemng,c.matkl
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+        join sapsr3.afpo g on g.mandt=b.mandt and g.aufnr=b.aufnr
+      where a.mandt='168' and a.rowid='AAANTaABfAAEIXhAAy'  and rownum=1
+ [0m
+  [1m[35mSapdb Load (808.4ms)[0m  
+      select e.packnr, e.pobjid,f.paitemtype,f.matnr,f.subpacknr,f.trgqty,f.baseunit,g.brgew,g.ntgew,g.gewei
+      from sapsr3.packkp e
+        join sapsr3.packpo f on f.mandt=e.mandt and f.packnr=e.packnr and f.inddel <> 'X'
+        left join sapsr3.mara g on g.mandt=f.mandt and g.matnr=f.matnr,
+        (
+          select e.packnr
+          from sapsr3.packkp e
+            join sapsr3.packpo f on f.mandt=e.mandt and f.packnr=e.packnr and f.inddel <> 'X'
+          where e.mandt='168' and e.pobjid like 'MU07-31052-A00G%' and f.matnr='MU07-31052-A00G' and e.pobjid <> f.matnr
+        ) v
+      where e.packnr = v.packnr or f.subpacknr = v.packnr and e.pobjid like 'MU07-31052-A00G%'
+    
+  [1m[36m (8.2ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'PRINTER' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mPrinter Load (1.3ms)[0m  SELECT "PRINTER"."UUID", "PRINTER"."CODE" FROM "PRINTER"
+  Rendered work_orders/confirm_box_label.html.haml within layouts/application (23.0ms)
+  Rendered layouts/_navigation_links.html.haml (0.5ms)
+  Rendered layouts/_navigation.html.haml (1.3ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 962ms (Views: 24.2ms | ActiveRecord: 889.9ms)
+
+
+Started POST "/work_orders/AAANTaABfAAEIXhAAy/print_box_label" for 172.91.132.3 at 2016-03-08 11:05:20 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#print_box_label as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wWXjeHW87ElDObh7aASaOJKYXSrEHo+eoiVxP5zKdsI2U1Tngvh85N/LOBH2B8tExgqbkTCIYtcNyX6VCsxZ6g==", "mblnr"=>"4907025334", "mjahr"=>"2016", "box_qty"=>"2", "no_of_box1"=>"1", "total_qty1"=>"1", "box_qty2"=>"0", "no_of_box2"=>"0", "total_qty2"=>"0", "pallet_qty"=>"1", "no_of_pallet1"=>"0", "total_box1"=>"0", "pallet_qty2"=>"0", "no_of_pallet2"=>"0", "total_box2"=>"0", "printer_id"=>"69a6d1c0c3ee0133af3d245e60e43101", "id"=>"AAANTaABfAAEIXhAAy"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1[0m  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[35mSapdb Load (70.6ms)[0m  
+      select
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr,g.psmng,g.wemng,c.matkl
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+        join sapsr3.afpo g on g.mandt=b.mandt and g.aufnr=b.aufnr
+      where a.mandt='168' and a.rowid='AAANTaABfAAEIXhAAy'  and rownum=1
+ 
+  [1m[36m (10.5ms)[0m  [1mSELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'STOCK_MASTER' AND hidden_column = 'NO' ORDER BY column_id[0m
+  [1m[35mStockMaster Load (1.4ms)[0m  SELECT * FROM (SELECT  "STOCK_MASTER".* FROM "STOCK_MASTER" WHERE "STOCK_MASTER"."MJAHR" = :a1 AND "STOCK_MASTER"."MBLNR" = :a2  ORDER BY "STOCK_MASTER"."UUID" ASC ) WHERE ROWNUM <= 1  [["mjahr", "2016"], ["mblnr", "4907025334"]]
+  [1m[36mPrinter Load (1.2ms)[0m  [1mSELECT  "PRINTER".* FROM "PRINTER" WHERE "PRINTER"."UUID" = :a1 AND ROWNUM <= 1 [0m  [["uuid", "69a6d1c0c3ee0133af3d245e60e43101"]]
+  [1m[35m (10.9ms)[0m  SELECT column_name AS name, data_type AS sql_type, data_default, nullable, virtual_column, hidden_column, data_type_owner AS sql_type_owner, DECODE(data_type, 'NUMBER', data_precision, 'FLOAT', data_precision, 'VARCHAR2', DECODE(char_used, 'C', char_length, data_length), 'RAW', DECODE(char_used, 'C', char_length, data_length), 'CHAR', DECODE(char_used, 'C', char_length, data_length), NULL) AS limit, DECODE(data_type, 'NUMBER', data_scale, NULL) AS scale FROM all_tab_cols WHERE owner = 'ISTOCK' AND table_name = 'BARCODE' AND hidden_column = 'NO' ORDER BY column_id
+  [1m[36mBarcode Load (4.8ms)[0m  [1mSELECT "BARCODE".* FROM "BARCODE" WHERE "BARCODE"."STOCK_MASTER_ID" = :a1[0m  [["stock_master_id", "b0f7f4a0c70501336ff140f2e9981332"]]
+Redirected to http://172.91.132.3:3000/work_orders/receipt
+Completed 302 Found in 259ms (ActiveRecord: 101.1ms)
+
+
+Started GET "/work_orders/receipt" for 172.91.132.3 at 2016-03-08 11:05:20 +0800
+Cannot render console from 172.91.132.3! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WorkOrdersController#receipt as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT * FROM (SELECT  "USERS".* FROM "USERS" WHERE "USERS"."UUID" = :a1  ORDER BY "USERS"."UUID" ASC ) WHERE ROWNUM <= 1  [["uuid", "d8162d90c40f013380d070761c0991b1"]]
+  [1m[36mSapdb Load (76.6ms)[0m  [1m
+      select a.rowid,
+        a.mblnr,a.mjahr,b.zeile,a.budat,a.cputm,a.usnam,
+        b.matnr,d.maktx,b.werks,b.lgort,b.charg,f.atwrt,b.menge,b.meins,
+        b.aufnr
+      from sapsr3.mkpf a
+        join sapsr3.mseg b on b.mandt=a.mandt and b.mblnr=a.mblnr and b.aufnr <> ' '
+        join sapsr3.mara c on c.mandt=b.mandt and c.matnr=b.matnr
+        join sapsr3.makt d on d.mandt=c.mandt and d.matnr=c.matnr and d.spras='M'
+        join sapsr3.mch1 e on e.mandt=b.mandt and e.matnr=b.matnr and e.charg=b.charg
+        join sapsr3.ausp f on f.mandt=e.mandt and f.objek=e.cuobj_bm and f.atinn='0000000816' and f.klart='023'
+      where a.mandt='168' and a.vgart = 'WR' and a.budat = '20160308'
+        and usnam like '%%' and werks like '%%' and matnr like '%%'
+        and aufnr like '%%'
+        and werks in ('281A','381A')
+      order by mjahr desc, mblnr desc
+    [0m
+  Rendered work_orders/receipt.html.haml within layouts/application (15.5ms)
+  Rendered layouts/_navigation_links.html.haml (0.8ms)
+  Rendered layouts/_navigation.html.haml (1.9ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+Completed 200 OK in 168ms (Views: 31.5ms | ActiveRecord: 78.3ms)
