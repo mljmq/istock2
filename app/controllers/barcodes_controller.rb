@@ -138,8 +138,38 @@ class BarcodesController < ApplicationController
     render json: response
   end
 
-  def repeat_printer_label
+  def repeat_printer
+    if params[:barcode].present?
+      @barcode = Barcode.find_by_uuid(params[:barcode])
+      @barcode = Barcode.find_by_seq(params[:barcode]) if @barcode.blank?
+    end
+  end
 
+  def printer_label
+    barcode = Barcode.where(:uuid => params[:uuid]).first
+    stock_master = StockMaster.where(:uuid => barcode.stock_master_id).first
+
+    printer = Printer.find params[:printer_id]
+    socket = TCPSocket.new(printer.ip, printer.port)
+
+    hash = {
+        :id => barcode.id,
+        :date => stock_master.budat,
+        :date_code => stock_master.datecode,
+        :lot_no => stock_master.charg,
+        :mo => stock_master.aufnr,
+        :qty => barcode.menge,
+        :product_no => stock_master.matnr,
+        :seq => barcode.seq,
+        :name => barcode.name.blank? ? '' : barcode.name[0].upcase,
+        :meins => stock_master.meins,
+        :seq_parent => (barcode.parent_id != 0 && barcode.name[0].upcase.eql?('B')) ? barcode.parent.seq : '',
+        :name_parent => (barcode.parent_id != 0 && barcode.name[0].upcase.eql?('P')) ? 'P' : barcode.parent.name[0].upcase,
+        :factory => stock_master.werks
+    }
+    zpl_command = Barcode.finish_goods_label hash
+    socket.write zpl_command
+    socket.close
   end
 
   private

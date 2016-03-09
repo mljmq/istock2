@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     get :in, on: :collection
     get :in_scan, on: :collection
     post :in_putaway, on: :collection
+    get :repeat_printer, on: :collection
+    get :printer_label, on: :collection
   end
 
   resources :stock_masters
