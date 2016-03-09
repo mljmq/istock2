@@ -18,3 +18,15 @@ th{background-color: #F8F8F8;}
 a:hover {color: red; text-decoration:underline;}
 .container-form{max-width: 768px;}
 @media print{.no-print{display: none !important;}}
+.dl-horizontal.mobile dt {
+  float:left;
+  width:60px;
+  overflow:hidden;
+  clear:left;
+  text-align:right;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
+.dl-horizontal.mobile dd {
+  margin-left:80px
+}

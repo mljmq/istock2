@@ -138,6 +138,7 @@ class StockMaster < ActiveRecord::Base
           :meins => record.meins,
           :mjahr => record.mjahr,
           :mblnr => record.mblnr,
+          :zeile => record.zeile,
           :aufnr => record.aufnr,
           :datecode => record.atwrt,
           :budat => record.budat,

@@ -40,6 +40,7 @@
 = form_tag(print_box_label_work_order_path(@record[:rowid]), method: 'post', class: 'form-inline') do
   = hidden_field_tag :mblnr, @record[:mblnr]
   = hidden_field_tag :mjahr, @record[:mjahr]
+  = hidden_field_tag :zeile, @record[:zeile]
   %table.table.table-bordered
     %thead
       %tr
