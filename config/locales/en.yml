@@ -83,6 +83,7 @@ en:
     box_cnt: '箱子'
     pallet_cnt: '棧板'
     container: '容器'
+    unlink_pallet: '解除棧板'
 
     stock_in: '入庫'
     stock_out: '出库'

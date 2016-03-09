@@ -14,8 +14,8 @@
       = '條碼管理'
       %b.caret
     %ul.dropdown-menu
-      %li= link_to '查詢', scan_barcodes_path
-      %li= link_to '入庫', in_barcodes_path
+      %li= link_to '查詢及解除棧板', scan_barcodes_path
+      %li= link_to '上貨架及轉貨架', in_barcodes_path
       %li= link_to '出庫', out_stock_trans_path
 
   %li= link_to '打印機', printers_path if current_user.role == 'admin'

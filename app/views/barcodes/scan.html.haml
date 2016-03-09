@@ -1,6 +1,6 @@
 .panel.panel-default
   .panel-heading
-    條碼信息查詢
+    條碼信息查詢及解除棧板
   .panel-body{style:'padding-bottom: 0px;'}
     = form_tag(scan_barcodes_url, method: 'get', class: 'form-horizontal', id:'form_id') do
       .form-group
@@ -42,7 +42,9 @@
           = @barcode.stock_master.meins
         - if @barcode.parent.present?
           %dt= t('attributes.pallet_cnt')
-          %dd= @barcode.parent.seq
+          %dd
+            = @barcode.parent.seq
+            = link_to t('attributes.unlink_pallet'), unlink_pallet_barcode_url(@barcode.uuid)
     %hr
     - if @barcodes.present?
       = "此棧板上有#{@barcodes.size}箱"

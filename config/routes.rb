@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :barcodes do
     get :scan, on: :collection
+    get :unlink_pallet, on: :member
     get :in, on: :collection
     get :in_scan, on: :collection
     post :in_putaway, on: :collection
